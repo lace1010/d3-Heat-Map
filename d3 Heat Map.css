@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* To make sure we can scroll through the svg when viewport is small we only align the svg vertically in the body with min-height (using height means body will not exceed viewport height size).
+    Then we center the svg horizontally with display: block and margin: auto in the svg class .graph */
+  min-height: 100vh;
+  background-color: paleturquoise;
+}
+
+#title {
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+  margin: 0.4rem 0 1rem 0;
+}
+
+.graph {
+  background-color: white;
+  border: 1px solid black;
+  display: block;
+  margin: auto;
+}
+
+#tooltip {
+  position: absolute;
+  max-width: 200px; /* As wide as the tooltip is allowed to be. Otherwise it is auto. (height is also auto by default) */
+  padding: 15px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell:hover {
+  stroke: black;
+}
+
+#author {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#my-link {
+  display: block;
+  margin-top: 0.3rem;
+  text-decoration: none;
+}
